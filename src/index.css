@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 56px;
+  color: #35323e;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 38px;
+  color: #35323e;
+  font-weight: 700;
+}
+
+h3 {
+  font-size: 24px;
+  color: #35323e;
+  font-weight: 700;
+}
+
+p {
+  font-size: 18px;
+  color: #9e9aa7;
+  font-weight: 500;
+}
+
+a:visited {
+  text-decoration: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  outline: none;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
