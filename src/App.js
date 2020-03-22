@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/navbar";
 import Intro from "./components/intro/intro";
 import Shortener from "./components/shortener/shortener";
 import Banner from "./components/banner/banner";
+import Footer from "./components/footer/footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
       </div>
 
       <Banner />
+      <Footer />
     </React.Fragment>
   );
 }
