@@ -12,9 +12,8 @@ function App() {
       </div>
       <Intro />
 
-      <div id="shorten-url">
+      <div className="body-container">
         <Shortener />
-        <p>More Text</p>
       </div>
     </React.Fragment>
   );

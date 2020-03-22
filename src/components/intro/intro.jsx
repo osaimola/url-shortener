@@ -14,7 +14,7 @@ function Intro() {
           </p>
           <button
             onClick={() => {
-              window.location.href = "#shorten-url";
+              window.location.href = "#shorten-links";
             }}
           >
             Get Started

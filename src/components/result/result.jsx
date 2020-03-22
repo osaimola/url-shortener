@@ -28,12 +28,12 @@ function Result(props) {
           <p>{props.longUrl}</p>
         </div>
         <div className={`shortened-url ${buttonText}`}>
-          <p id="shortenedUrlResult">{props.shortUrl}</p>
+          <p id="shortenedUrlResult">{props.shortUrl.slice(8)}</p>
           <button
             onClick={() => {
-              copyToClipboard(props.liveUrl);
               setButtonText("Copied");
-              setTimeout(() => resetButtonText(setButtonText), 3000);
+              copyToClipboard(props.shortUrl);
+              setTimeout(() => resetButtonText(setButtonText), 1800);
             }}
           >
             {buttonText}
