@@ -1,0 +1,87 @@
+.result {
+  position: relative;
+  top: -48px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 5% 24px 5%;
+  border-radius: 6px;
+  background-color: white;
+}
+
+.result button {
+  color: white;
+  background-color: #2acfcf;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 12px 28px;
+  margin-top: 8px;
+  border: none;
+  min-width: 111px;
+}
+
+.result button:hover {
+  background-color: #9cdada;
+}
+
+.long-url {
+  overflow-x: hidden;
+  padding: 16px 16px 8px 16px;
+}
+
+.long-url p {
+  margin: 0;
+  color: #35323e;
+}
+
+.shortened-url {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  padding: 8px 16px 16px 16px;
+  border-top: 0.5px solid #bfbfbf;
+}
+
+.shortened-url.Copied button {
+  background-color: #3b3054;
+}
+
+.shortened-url p {
+  margin: 0;
+  color: #2acfcf;
+}
+
+@media only screen and (min-width: 650px) {
+  .result {
+    top: -36px;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0 10% 18px 10%;
+  }
+
+  .result button {
+    margin-top: 0px;
+  }
+
+  .long-url {
+    display: flex;
+    padding-bottom: 16px;
+  }
+
+  .long-url p {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+
+  .shortened-url {
+    flex-direction: row;
+    padding-top: 16px;
+    border: none;
+  }
+
+  .shortened-url p {
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 24px;
+  }
+}

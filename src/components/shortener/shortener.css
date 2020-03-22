@@ -1,0 +1,66 @@
+.shortener {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border-radius: 8px;
+  top: -75px;
+  margin: 0px 5%;
+  background-color: #35323e;
+  background-image: url(../../images/bg-shorten-mobile.svg);
+  background-size: cover;
+}
+
+.shortener button {
+  color: white;
+  background-color: #2acfcf;
+  font-weight: 700;
+  border-radius: 8px;
+  font-size: 16px;
+  padding: 12px 28px;
+  border: none;
+}
+
+.shortener button:hover {
+  background-color: #9cdada;
+}
+
+.shortener input {
+  font-weight: 700;
+  font-size: 16px;
+  color: #35323e;
+  border: none;
+  border-radius: 8px;
+  flex-grow: 1;
+  padding: 12px 18px;
+  margin: 0 0 18px 0;
+}
+
+::placeholder {
+  color: #bfbfbf;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #bfbfbf;
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: #bfbfbf;
+}
+
+@media only screen and (min-width: 850px) {
+  .shortener {
+    flex-direction: row;
+    top: -59px;
+    background-image: url(../../images/bg-shorten-desktop.svg);
+    margin: 0px 10%;
+    padding: 38px;
+  }
+
+  .shortener input {
+    margin: 0 24px 0 0;
+  }
+}
