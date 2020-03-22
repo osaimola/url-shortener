@@ -58,7 +58,16 @@ function formatUrl(inputText) {
 }
 
 function Shortener() {
-  const [urlResults, setUrlResults] = useState([]);
+  const [urlResults, setUrlResults] = useState([
+    {
+      longUrl: "https://www.mangororor.hahna/hdhdh.php",
+      shortUrl: "https://urlday.com/JHSK"
+    },
+    {
+      longUrl: "https://www.welovepups.com/locations/pups/adopt.php",
+      shortUrl: "https://urlday.com/JgfK"
+    }
+  ]);
   const [inputValue, setInputValue] = useState("");
 
   return (
