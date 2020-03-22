@@ -1,0 +1,63 @@
+.intro-main {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.intro-text {
+  text-align: center;
+}
+
+.intro-text h1 {
+  max-width: 500px;
+  margin-bottom: 0px;
+}
+
+.intro-text p {
+  max-width: 450px;
+  margin-top: 0px;
+}
+
+.intro-image {
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.intro-image img {
+  max-width: 580px;
+}
+
+.intro-main button {
+  color: white;
+  background-color: #2acfcf;
+  font-weight: 700;
+  border-radius: 30px;
+  font-size: 14px;
+  padding: 10px 24px;
+  border: none;
+}
+
+.intro-main button:hover {
+  background-color: #9cdada;
+}
+
+@media only screen and (min-width: 650px) {
+  .intro-main {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .intro-text {
+    margin-left: 10%;
+    text-align: left;
+    vertical-align: middle;
+  }
+
+  .intro-image {
+    max-width: 850px;
+    overflow-x: hidden;
+  }
+
+  .intro-image img {
+    max-width: max-content;
+  }
+}

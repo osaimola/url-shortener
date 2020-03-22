@@ -55,12 +55,16 @@
 
 .floating-navbar {
   display: none;
+  position: absolute;
   flex-direction: column;
   background-color: #3b3054;
-  max-width: 450px;
   border-radius: 10px;
   padding: 0px 18px;
   margin: auto;
+  z-index: 1;
+  right: 5%;
+  left: 5%;
+  min-width: 160px;
 }
 
 .floating-navbar.show {

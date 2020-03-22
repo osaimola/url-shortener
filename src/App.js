@@ -1,6 +1,7 @@
 import React from "react";
 import "./App.css";
 import Navbar from "./components/navbar/navbar";
+import Intro from "./components/intro/intro";
 
 function App() {
   return (
@@ -8,11 +9,9 @@ function App() {
       <div className="head">
         <Navbar />
       </div>
+      <Intro />
 
-      <h1>More than just links</h1>
-      <h2>Advanced Statistics</h2>
-      <h3>Detailed Recognition</h3>
-      <p>Hello World</p>
+      <div id="shorten-url">kk</div>
     </React.Fragment>
   );
 }
