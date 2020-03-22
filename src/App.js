@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/navbar/navbar";
 import Intro from "./components/intro/intro";
 import Shortener from "./components/shortener/shortener";
+import Banner from "./components/banner/banner";
 
 function App() {
   return (
@@ -11,10 +12,11 @@ function App() {
         <Navbar />
       </div>
       <Intro />
-
       <div className="body-container">
         <Shortener />
       </div>
+
+      <Banner />
     </React.Fragment>
   );
 }
