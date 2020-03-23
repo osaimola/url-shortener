@@ -36,6 +36,11 @@
   margin: 0 0 18px 0;
 }
 
+.shortener.error input {
+  color: #911616;
+  padding: 12px 20px;
+}
+
 ::placeholder {
   color: #bfbfbf;
   opacity: 1; /* Firefox */

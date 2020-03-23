@@ -32,7 +32,7 @@ function Pitch() {
 
           <div className="pitch-offer">
             <div className="pitch-icon">
-              <img alt="brand recognition" src={brand_recognition} />
+              <img alt="detailed records" src={detailed_records} />
             </div>
             <div className="pitch-copy">
               <h3>Detailed Records</h3>
@@ -46,7 +46,7 @@ function Pitch() {
 
           <div className="pitch-offer">
             <div className="pitch-icon">
-              <img alt="brand recognition" src={brand_recognition} />
+              <img alt="fully customizable" src={fully_customizable} />
             </div>
             <div className="pitch-copy">
               <h3>Fully Customizable</h3>

@@ -57,22 +57,30 @@ function formatUrl(inputText) {
   }
 }
 
+function handleBadUrl(setHook) {
+  setHook(false);
+  setTimeout(function() {
+    setHook(true);
+  }, 100);
+  setTimeout(function() {
+    setHook(false);
+  }, 200);
+  setTimeout(function() {
+    setHook(true);
+  }, 300);
+}
+
 function Shortener() {
-  const [urlResults, setUrlResults] = useState([
-    {
-      longUrl: "https://www.mangororor.hahna/hdhdh.php",
-      shortUrl: "https://urlday.com/JHSK"
-    },
-    {
-      longUrl: "https://www.welovepups.com/locations/pups/adopt.php",
-      shortUrl: "https://urlday.com/JgfK"
-    }
-  ]);
+  const [urlResults, setUrlResults] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [validInput, setValidInput] = useState(true);
 
   return (
     <React.Fragment>
-      <div className="shortener" id="shorten-links">
+      <div
+        className={`shortener ${validInput ? "" : "error"}`}
+        id="shorten-links"
+      >
         <input
           name="url"
           placeholder="Shorten a link here..."
@@ -85,8 +93,8 @@ function Shortener() {
             if (is_url(inputValue)) {
               handleClick(inputValue, urlResults, setUrlResults);
             } else {
-              //TODO show user error message
-              console.log("invalid url");
+              //faulty url, alert user
+              handleBadUrl(setValidInput);
             }
           }}
         >
