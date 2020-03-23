@@ -1,0 +1,79 @@
+.pitch {
+  display: flex;
+  flex-direction: column;
+  padding: 0 5%;
+}
+
+.pitch-intro {
+  text-align: center;
+  max-width: 525px;
+  margin: auto;
+}
+
+.pitch-intro h2 {
+  font-size: 30px;
+  margin-bottom: 0;
+}
+
+.pitch-body {
+  padding: 42px 0 64px 0;
+}
+
+.pitch-offer {
+  background-color: white;
+  border-radius: 8px;
+  margin-top: 40px;
+  margin-bottom: 80px;
+  padding-bottom: 40px;
+}
+
+.pitch-icon {
+  position: relative;
+  top: -40px;
+  margin: 0 auto 0 auto;
+  padding: 20px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-color: #3b3054;
+}
+
+.pitch-copy {
+  text-align: center;
+  margin: auto;
+  max-width: 350px;
+}
+
+.pitch-copy h3 {
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 850px) {
+  .pitch {
+    padding: 0 10%;
+  }
+
+  .pitch-intro h2 {
+    font-size: 38px;
+  }
+
+  .pitch-body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .pitch-offer {
+    margin: auto 5px auto 5px;
+  }
+
+  .pitch-icon {
+    left: 20px;
+    margin: 0;
+  }
+
+  .pitch-copy {
+    text-align: left;
+    padding: 0 16px;
+  }
+}
