@@ -3,9 +3,21 @@ import ReactDOM from "react-dom";
 import { render } from "@testing-library/react";
 import Navbar from "./navbar";
 
-it("renders Navbar without creashing", () => {
+/** test('renders learn react link', () => {
+  const { getByText } = render(<App />);
+  const linkElement = getByText(/learn react/i);
+  expect(linkElement).toBeInTheDocument();
+}); **/
+
+it("renders Navbar without crashing", () => {
   let div = document.createElement("div");
   ReactDOM.render(<Navbar />, div);
+});
+
+test("renders app icon", () => {
+  const { getByAltText } = render(<Navbar />);
+  const logoElement = getByAltText("shortly");
+  expect(logoElement).toBeInTheDocument();
 });
 
 test("renders all Features links", () => {
@@ -40,8 +52,10 @@ test("renders all Login links", () => {
   expect(linkElement[1]).toBeInTheDocument();
 });
 
-/** test('renders learn react link', () => {
-  const { getByText } = render(<App />);
-  const linkElement = getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-}); **/
+test("renders all Sign Up buttons", () => {
+  const { getAllByText } = render(<Navbar />);
+  const linkElement = getAllByText(/Sign Up/i);
+  expect(linkElement.length).toEqual(2);
+  expect(linkElement[0]).toBeInTheDocument();
+  expect(linkElement[1]).toBeInTheDocument();
+});
