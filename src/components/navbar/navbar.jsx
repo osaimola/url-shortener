@@ -4,6 +4,8 @@ import logo from "../../images/logo.svg";
 import hamburger from "../../images/hamburger.svg";
 
 function Navbar() {
+  let [count, setCount] = useState(0);
+
   const [floatNav, setFloatNav] = useState("");
 
   return (
@@ -25,7 +27,6 @@ function Navbar() {
             src={hamburger}
             className="nav-toggle"
             onClick={() => {
-              console.log("clicked");
               floatNav === "" ? setFloatNav("show") : setFloatNav("");
             }}
           />

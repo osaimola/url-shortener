@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { render } from "@testing-library/react";
+import { render, fireEvent, getByTestId } from "@testing-library/react";
 import Navbar from "./navbar";
 
 /** test('renders learn react link', () => {
@@ -58,4 +58,20 @@ test("renders all Sign Up buttons", () => {
   expect(linkElement.length).toEqual(2);
   expect(linkElement[0]).toBeInTheDocument();
   expect(linkElement[1]).toBeInTheDocument();
+});
+
+test("renders Hamburger menu button", () => {
+  const { getByAltText } = render(<Navbar />);
+  const hamburger = getByAltText("nav-toggle");
+  expect(hamburger).toBeInTheDocument();
+});
+
+test("clicking hamburger toggles floating menu", () => {
+  const { container, getByAltText } = render(<Navbar />);
+  const hamburger = getByAltText("nav-toggle");
+  expect(container.lastElementChild.className).toEqual("floating-navbar ");
+  fireEvent.click(hamburger);
+  expect(container.lastElementChild.className).toEqual("floating-navbar show");
+  fireEvent.click(hamburger);
+  expect(container.lastElementChild.className).toEqual("floating-navbar ");
 });
